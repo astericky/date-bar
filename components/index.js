@@ -1,5 +1,5 @@
 import 'webcomponents.js';
-import dateWidget from './date-widget.es2015.comp';
+import './date-widget.es2015.comp';
 
 function main() {
     let header = document.createElement('header');

@@ -100,13 +100,6 @@
 
             // Call the draw function initially
             this.draw();
-            /*
-            var that = this;
-            // Call the draw function every second to udpate the time
-            setInterval(function(){
-                that.draw();
-            }, 1000);
-            */
 
             // Call the draw function every second to update the time
             setInterval(() => {
