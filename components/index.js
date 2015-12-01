@@ -11,6 +11,8 @@ function main() {
     main.className = 'main';
     footer.className = 'footer';
 
+    dateWidget.setAttribute('theme', 'gold');
+
     main.appendChild(dateWidget);
 
     document.body.appendChild(header);

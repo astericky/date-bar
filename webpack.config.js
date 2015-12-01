@@ -12,13 +12,13 @@ const PATHS = {
 
 var common = {
     entry: {
-        app: path.resolve(PATHS.app)
+        app: PATHS.app
     },
     resolve: {
         extensions: ['', '.js']
     },
     output: {
-        path: path.resolve(PATHS.build),
+        path: PATHS.build,
         filename: 'bundle.js'
     },
     module: {
@@ -26,7 +26,7 @@ var common = {
             {
                 test: /\.js$/,
                 loaders: ['babel'],
-                include: path.resolve(PATHS.app)
+                include: PATHS.app
             }
         ]
     },
@@ -38,7 +38,7 @@ var common = {
     ]
 };
 
-if (TARGET === 'start' || TARGET) {
+if (TARGET === 'start' || !TARGET) {
     module.exports = merge(common, {
         devtool: 'eval-source-map',
         devServer: {
