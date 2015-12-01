@@ -1,4 +1,3 @@
-import 'webcomponents.js';
 import './date-widget.es2015.comp';
 
 function main() {

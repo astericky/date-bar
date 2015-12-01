@@ -6,12 +6,14 @@ var merge             = require('webpack-merge');
 // get lifecycle event from command line after npm
 const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
-    app: path.join(__dirname, 'components'),
-    build: path.join(__dirname, 'build')
+    common: ['webcomponents.js'],
+    app:    path.join(__dirname, 'components'),
+    build:  path.join(__dirname, 'build')
 };
 
 var common = {
     entry: {
+        common: PATHS.common,
         app: PATHS.app
     },
     resolve: {
@@ -19,7 +21,7 @@ var common = {
     },
     output: {
         path: PATHS.build,
-        filename: 'bundle.js'
+        filename: '[name].js'
     },
     module: {
         loaders: [
